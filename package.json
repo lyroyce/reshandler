@@ -1,0 +1,31 @@
+{
+  "name": "reshandler",
+  "description": "A response handler that makes HTTP response processing simpler.",
+  "tags": [
+    "http",
+    "response",
+    "handler",
+    "filter",
+    "utility",
+    "decompress",
+    "encoding"
+  ],
+  "version": "0.1.5",
+  "author": {
+    "name": "Yin Li",
+    "email": "lyroyce@sina.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/lyroyce/reshandler.git"
+  },
+  "license": "MIT",
+  "engines": [
+    "node >= 0.8.0"
+  ],
+  "main": "index.js",
+  "dependencies": {
+    "iconv-lite": "~0.2.0"
+  },
+  "readmeFilename": "README.md"
+}
