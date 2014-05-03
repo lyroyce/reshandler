@@ -15,7 +15,7 @@ The example below gets and processes the HTTP response according to its content 
 	    .onType('text/html', reshandler.decompress())	// add a pre-defined filter for HTML
 	    .onType('text/html', reshandler.transcode())	// add another pre-defined filter for HTML
 		.done(function(err, res, buffer){				// add the last callback
-			console.log("The processed resonse: " + buffer.toString());
+			console.log("The processed response: " + buffer.toString());
 		})
 	).on('error', function(e) {
 		console.log("Got error: " + e.message);
@@ -33,7 +33,7 @@ The example below gets and processes the HTTP response according to its content 
 
 - **Handler.onType(contentType, function (res, buffer, callback) {...})**
 
-	Register a pre-defined or custom filter function for the specified `contentType`. The filter function will only be called when `contentType` matches(is a substring of) 'content-type' header of the response. Multiple filter functions can be registered and will be called in the order they were registered.
+	Register a pre-defined or custom filter function for the specified `contentType`. The filter function will only be called when `contentType` matches(is a substring of) 'Content-Type' header of the response. Multiple filter functions can be registered and will be called in the order they were registered.
 
 	Please note that `callback`(`function(err, res, buffer)`) must be called in the end of each filter function for chaining filters to work. Unless you are sure that filter function is the last one to execute.
 
